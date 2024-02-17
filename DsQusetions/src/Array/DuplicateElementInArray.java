@@ -7,7 +7,7 @@ public class DuplicateElementInArray {
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4, 5, 2, 1, 1};
 
-        Set<Integer> arrSet = new HashSet<>();
+        List<Integer> arrSet = new ArrayList<>();
 
         for(int i = 0; i < arr.length; i++) {
 

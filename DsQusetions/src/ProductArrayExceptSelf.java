@@ -19,10 +19,20 @@ public class ProductArrayExceptSelf {
             leftArray[i] = leftArray[i - 1] * nums[i - 1];
         }
 
+        for(int i : leftArray) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
         rightArray[l - 1] = 1;
         for (int i = l - 2; i > -1; i--) {
             rightArray[i] = rightArray[i + 1] * nums[i + 1];
         }
+
+        for(int i : rightArray) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
 
         for (int i = 0; i < l; i++) {
             resultArr[i] = leftArray[i] * rightArray[i];

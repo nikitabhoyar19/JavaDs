@@ -21,7 +21,7 @@ public class TwoSum {
         // if not then add it to map and its index also
         for(int i=0; i<length; i++) {
             if(map.containsKey(nums[i])) {
-                return new int[]{i, map.get(nums[i])};
+                return new int[]{map.get(nums[i]), i};
             }
             map.put(target-nums[i], i);
         }
