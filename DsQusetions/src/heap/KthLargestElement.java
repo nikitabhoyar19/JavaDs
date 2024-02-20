@@ -14,16 +14,16 @@ public class KthLargestElement {
 
     public static int findKthLargest(int[] nums, int k) {
 
-        Queue<Integer> maxHeap = new PriorityQueue<>(k);
+        Queue<Integer> minHeap = new PriorityQueue<>(k);
 
         for(int i : nums) {
-            maxHeap.offer(i);
-            while(maxHeap.size() > k) {
-                maxHeap.poll();
+            minHeap.offer(i);
+            while(minHeap.size() > k) {
+                minHeap.poll();
             }
         }
 
-        return maxHeap.poll();
+        return minHeap.poll();
 
     }
 
