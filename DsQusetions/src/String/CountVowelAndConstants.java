@@ -14,7 +14,7 @@ public class CountVowelAndConstants {
         int vowelCount = 0;
         int constantCount = 0;
 
-        String vowelStr = new String("aeiouAEIOU");
+        String vowelStr = new String("aeiouAEIOU1");
 
         for(char ch : string.toCharArray()) {
 
