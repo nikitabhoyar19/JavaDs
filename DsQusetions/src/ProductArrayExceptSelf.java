@@ -4,7 +4,7 @@ public class ProductArrayExceptSelf {
         int arr[] = { -1,1,0,-3,3 };
         int result[] = productExceptSelf(arr);
         for(int i : result) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
     }
 
