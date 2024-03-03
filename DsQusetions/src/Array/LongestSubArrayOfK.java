@@ -3,7 +3,7 @@ package Array;
 public class LongestSubArrayOfK {
 
     public static void main(String[] args) {
-         int arr[] = { 1, 2, 3, 1, 1, 1 };
+         int arr[] = { 1, 2, 3, 1, 1, 0, 1 };
          int k = 3;
 
         System.out.println(longestSubArray(arr, k));
@@ -11,6 +11,34 @@ public class LongestSubArrayOfK {
 
     private static int longestSubArray(int[] nums, int k) {
         int count = 0;
+        int l = 0, r = 0;
+        long sum = nums[0];
+
+        while(r < nums.length) {
+
+            // if sum greater
+            while(l <= r && sum > k) {
+                sum -= nums[l];
+                l++;
+            }
+
+            if(sum == k) {
+                count = Math.max(count, r-l+1);
+            }
+            r++;
+
+            if(r < nums.length) {
+                sum += nums[r];
+            }
+        }
+
+        return count;
+    }
+
+}
+
+/*
+int count = 0;
 
         for(int i = 0; i < nums.length; i++) {
             int sum = 0;
@@ -24,7 +52,4 @@ public class LongestSubArrayOfK {
             }
         }
         return count;
-    }
-
-
-}
+*/
