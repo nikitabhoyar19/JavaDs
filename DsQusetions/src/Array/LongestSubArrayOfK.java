@@ -9,31 +9,21 @@ public class LongestSubArrayOfK {
         System.out.println(longestSubArray(arr, k));
     }
 
-    private static int longestSubArray(int[] arr, int k) {
-        int globalCount = 0;
-        int sum = 0;
+    private static int longestSubArray(int[] nums, int k) {
         int count = 0;
 
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] < k && arr[i] != k) {
-                sum+= arr[i];
-                if(sum > k) {
-                    count = 0;
-                }
-                else count++;
-                if(sum == k) {
-                    globalCount = Math.max(globalCount, count);
-                   count = 0;
-                   sum = 0;
-                }
-            }
-            else if(arr[i] == k) {
-               count = 1;
-               globalCount = Math.max(globalCount, count);
-            }
+        for(int i = 0; i < nums.length; i++) {
+            int sum = 0;
+            for(int j = i; j < nums.length; j++) {
 
+                sum += nums[j];
+
+                if(sum == k) {
+                    count = Math.max(count, j-i+1);
+                }
+            }
         }
-        return globalCount;
+        return count;
     }
 
 
