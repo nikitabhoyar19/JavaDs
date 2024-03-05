@@ -36,6 +36,8 @@ public class RotateBy90 {
         }
     }
 }
+// t.c o(n2) + o(n2) = o(n2) only
+// s.c o(1)
 
 /*
 t.c = o(n2)
