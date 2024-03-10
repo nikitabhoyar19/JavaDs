@@ -67,3 +67,13 @@ public class SpiralMatrix {
         return ans;
     }
 }
+
+/*
+left to right... left++
+top to bottom... right--
+bottom-1 to left... bottom--
+bottom to top... left++
+
+t.c. O(n*m)
+s.c. O(n*m)
+*/
