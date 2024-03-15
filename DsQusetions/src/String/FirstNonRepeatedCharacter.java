@@ -20,9 +20,8 @@ public class FirstNonRepeatedCharacter {
         }
 
         for(Map.Entry<Character, Integer> entry : charMap.entrySet()) {
-            if(entry.getValue() == 1)
+            if(entry.getValue() > 1)
                 System.out.println(entry.getKey());
-                break;
         }
     }
 }
