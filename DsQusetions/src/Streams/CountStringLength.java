@@ -13,6 +13,7 @@ public class CountStringLength {
         long count = stringList.stream().filter(s -> s.length() > 3).count();
         long countAllStrings = stringList.stream().count();
         System.out.println(count);
+        // here count of strings
         System.out.println(countAllStrings);
 
         //printAllStrings
